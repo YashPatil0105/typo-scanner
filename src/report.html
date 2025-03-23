@@ -1,273 +1,0 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Report for sample.js</title>
-  <style>
-    /* Basic reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #1e1e1e; /* Dark theme background */
-      color: #d4d4d4;            /* VS Code-like text color */
-      font-family: Consolas, "Courier New", monospace;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #2d2d2d;
-      padding: 1rem;
-      text-align: center;
-      border-bottom: 1px solid #3c3c3c;
-    }
-
-    header h1 {
-      color: #ffffff;
-      margin: 0;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 1rem auto;
-      padding: 0 1rem;
-    }
-
-    pre {
-      background: #252526;  /* Another dark shade for code block */
-      padding: 1rem;
-      overflow-x: auto;
-      border-radius: 4px;
-      line-height: 1.5;
-      margin-top: 1rem;
-      color: #d4d4d4;
-      position: relative;
-    }
-
-    .line {
-      display: block;
-      white-space: pre;
-    }
-
-    .line-number {
-      color: #858585;
-      margin-right: 1rem;
-      user-select: none;
-    }
-
-    /* Error highlighting */
-    .error {
-      background-color: #c75e5e; /* A red-tinted background for typos */
-      color: #ffffff;
-      padding: 1px 2px;
-      border-radius: 2px;
-      cursor: pointer;
-      position: relative;
-    }
-
-    /* Tooltip container */
-    .tooltip {
-      position: relative;
-      display: inline-block;
-    }
-
-    /* Tooltip text */
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      max-width: 300px;
-      background-color: #3c3c3c;
-      color: #ffffff;
-      text-align: left;
-      border-radius: 4px;
-      padding: 0.5rem;
-      position: absolute;
-      z-index: 999;
-      /* Position the tooltip to the right */
-      top: 50%;
-      left: 105%;
-      transform: translateY(-50%);
-      opacity: 0;
-      transition: opacity 0.2s ease-in-out;
-      font-size: 0.9rem;
-      border: 1px solid #555;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-      white-space: normal; /* Allow line wraps inside tooltip */
-    }
-
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .tooltip-title {
-      font-weight: bold;
-      margin-bottom: 0.2rem;
-    }
-
-    .suggestion-list {
-      margin: 0.3rem 0 0 1rem;
-      padding: 0;
-    }
-
-    .suggestion-list li {
-      list-style: disc;
-      margin-left: 1rem;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Report for sample.js</h1>
-  </header>
-  <div class="container">
-    <pre>
-<span class="line"><span class="line-number">  1</span> // This is a sampple JavaScript file with intentional typoes</span>
-<span class="line"><span class="line-number">  2</span> </span>
-<span class="line"><span class="line-number">  3</span> function <span class="tooltip error">calcluateSum<span class="tooltiptext">
-          <div class="tooltip-title">Word: calcluateSum</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>calculates</li>
-          </ul>
-        </span></span>(a, b) {</span>
-<span class="line"><span class="line-number">  4</span>     return a + b;</span>
-<span class="line"><span class="line-number">  5</span>   }</span>
-<span class="line"><span class="line-number">  6</span>   </span>
-<span class="line"><span class="line-number">  7</span>   const <span class="tooltip error">numbrs<span class="tooltiptext">
-          <div class="tooltip-title">Word: numbrs</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>numbers</li><li>numbs</li><li>number's</li>
-          </ul>
-        </span></span> = [1, 2, 3, 4];</span>
-<span class="line"><span class="line-number">  8</span>   let <span class="tooltip error">totl<span class="tooltiptext">
-          <div class="tooltip-title">Word: totl</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>total</li><li>tot</li><li>tots</li><li>toll</li><li>tote</li><li>toil</li><li>tool</li><li>tilt</li><li>tootle</li><li>toot</li>
-          </ul>
-        </span></span> = 0;</span>
-<span class="line"><span class="line-number">  9</span>   </span>
-<span class="line"><span class="line-number"> 10</span>   <span class="tooltip error">numbr<span class="tooltiptext">
-          <div class="tooltip-title">Word: numbr</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>number</li><li>numbs</li>
-          </ul>
-        </span></span>s.forEach(numbr => {</span>
-<span class="line"><span class="line-number"> 11</span>     <span class="tooltip error">totl<span class="tooltiptext">
-          <div class="tooltip-title">Word: totl</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>total</li><li>tot</li><li>tots</li><li>toll</li><li>tote</li><li>toil</li><li>tool</li><li>tilt</li><li>tootle</li><li>toot</li>
-          </ul>
-        </span></span> += <span class="tooltip error">numbr<span class="tooltiptext">
-          <div class="tooltip-title">Word: numbr</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>number</li><li>numbs</li>
-          </ul>
-        </span></span>;</span>
-<span class="line"><span class="line-number"> 12</span>   });</span>
-<span class="line"><span class="line-number"> 13</span>   </span>
-<span class="line"><span class="line-number"> 14</span>   console.log("The total is:", <span class="tooltip error">totl<span class="tooltiptext">
-          <div class="tooltip-title">Word: totl</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>total</li><li>tot</li><li>tots</li><li>toll</li><li>tote</li><li>toil</li><li>tool</li><li>tilt</li><li>tootle</li><li>toot</li>
-          </ul>
-        </span></span>);</span>
-<span class="line"><span class="line-number"> 15</span>   </span>
-<span class="line"><span class="line-number"> 16</span>   class <span class="tooltip error">Calcualtor<span class="tooltiptext">
-          <div class="tooltip-title">Word: Calcualtor</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>Calculator</li><li>Calculators</li>
-          </ul>
-        </span></span> {</span>
-<span class="line"><span class="line-number"> 17</span>     constructor() {</span>
-<span class="line"><span class="line-number"> 18</span>       this.<span class="tooltip error">reslt<span class="tooltiptext">
-          <div class="tooltip-title">Word: reslt</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>result</li><li>rest</li><li>reset</li>
-          </ul>
-        </span></span> = 0;</span>
-<span class="line"><span class="line-number"> 19</span>     }</span>
-<span class="line"><span class="line-number"> 20</span>     addNummber(<span class="tooltip error">numbr<span class="tooltiptext">
-          <div class="tooltip-title">Word: numbr</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>number</li><li>numbs</li>
-          </ul>
-        </span></span>) {</span>
-<span class="line"><span class="line-number"> 21</span>       this.<span class="tooltip error">reslt<span class="tooltiptext">
-          <div class="tooltip-title">Word: reslt</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>result</li><li>rest</li><li>reset</li>
-          </ul>
-        </span></span> += <span class="tooltip error">numbr<span class="tooltiptext">
-          <div class="tooltip-title">Word: numbr</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>number</li><li>numbs</li>
-          </ul>
-        </span></span>;</span>
-<span class="line"><span class="line-number"> 22</span>     }</span>
-<span class="line"><span class="line-number"> 23</span>     getReslt() {</span>
-<span class="line"><span class="line-number"> 24</span>       return this.<span class="tooltip error">reslt<span class="tooltiptext">
-          <div class="tooltip-title">Word: reslt</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>result</li><li>rest</li><li>reset</li>
-          </ul>
-        </span></span>;</span>
-<span class="line"><span class="line-number"> 25</span>     }</span>
-<span class="line"><span class="line-number"> 26</span>   }</span>
-<span class="line"><span class="line-number"> 27</span>   </span>
-<span class="line"><span class="line-number"> 28</span>   const <span class="tooltip error">calc<span class="tooltiptext">
-          <div class="tooltip-title">Word: calc</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>calk</li><li>calf</li><li>calm</li><li>clack</li><li>calls</li><li>calks</li><li>caulk</li><li>chalk</li>
-          </ul>
-        </span></span> = new <span class="tooltip error">Calcualtor<span class="tooltiptext">
-          <div class="tooltip-title">Word: Calcualtor</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>Calculator</li><li>Calculators</li>
-          </ul>
-        </span></span>();</span>
-<span class="line"><span class="line-number"> 29</span>   <span class="tooltip error">calc<span class="tooltiptext">
-          <div class="tooltip-title">Word: calc</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>calk</li><li>calf</li><li>calm</li><li>clack</li><li>calls</li><li>calks</li><li>caulk</li><li>chalk</li>
-          </ul>
-        </span></span>.addNummber(5);</span>
-<span class="line"><span class="line-number"> 30</span>   <span class="tooltip error">calc<span class="tooltiptext">
-          <div class="tooltip-title">Word: calc</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>calk</li><li>calf</li><li>calm</li><li>clack</li><li>calls</li><li>calks</li><li>caulk</li><li>chalk</li>
-          </ul>
-        </span></span>.addNummber(10);</span>
-<span class="line"><span class="line-number"> 31</span>   console.log("Calculator result:", <span class="tooltip error">calc<span class="tooltiptext">
-          <div class="tooltip-title">Word: calc</div>
-          <div>Suggestions:</div>
-          <ul class="suggestion-list">
-            <li>calk</li><li>calf</li><li>calm</li><li>clack</li><li>calls</li><li>calks</li><li>caulk</li><li>chalk</li>
-          </ul>
-        </span></span>.getReslt());</span>
-<span class="line"><span class="line-number"> 32</span>   </span>
-
-    </pre>
-  </div>
-</body>
-</html>

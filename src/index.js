@@ -73,25 +73,6 @@ function analyzeFile(filePath) {
   // Use an object to aggregate duplicate typos
   const typosMap = {};
 
-//   identifiers.forEach((word) => {
-//     // Skip words on the whitelist
-//     if (whitelist.includes(word)) return;
-
-//     // Check if the word is misspelled (i.e., has suggestions)
-//     const suggestions = checkWord(word);
-//     if (suggestions.length > 0) {
-//       // If it's the first time, create an entry for the word
-//       if (!typosMap[word]) {
-//         typosMap[word] = {
-//           word: word,
-//           count: 0,
-//           suggestions: suggestions,
-//         };
-//       }
-//       // Increment the count of occurrences
-//       typosMap[word].count += 1;
-//     }
-//   });
 identifiers.forEach(({ name, loc }) => {
     if (whitelist.includes(name)) return;
     const suggestions = checkWord(name);
@@ -139,7 +120,11 @@ results.forEach(result => {
   });
 
  
-    generateHTMLReport(filePath, results);
+  // Generate report in the same directory as the file being analyzed
+  const reportPath = path.resolve(path.dirname(filePath), "report.html");
+
+  generateHTMLReport(filePath, results, reportPath); 
+  console.log(`HTML report generated: ${reportPath}`);
   
 
 }
