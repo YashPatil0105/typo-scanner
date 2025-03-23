@@ -183,7 +183,13 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For questions, suggestions, or feedback, please open an issue on GitHub or contact [yashpatil0107@gmail.com](mailto:yashpatil0107@gmail.com).
+For questions, suggestions, or feedback, please open an issue on GitHub or contact [your-email@example.com](mailto:your-email@example.com).
 
 ---
 
+Happy coding!
+```
+
+---
+
+This README provides a comprehensive overview of your package and how to use it, making it easier for users to get started and for contributors to understand the project structure. Feel free to modify sections as needed to best match your project details.
