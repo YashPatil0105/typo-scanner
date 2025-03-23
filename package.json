@@ -1,0 +1,26 @@
+{
+  "name": "typo-scanner",
+  "version": "1.0.0",
+  "description": "A tool to detect and report typos in your JavaScript code",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YashPatil0105/typo-scanner.git"
+  },
+  "keywords": ["typo", "spell-check", "static-analysis"],
+  "author": "Yash Patil",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/parser": "^7.26.10",
+    "@babel/traverse": "^7.26.10",
+    "commander": "^13.1.0",
+    "spellchecker": "^3.7.1"
+  },
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "mocha": "^11.1.0"
+  }
+}
