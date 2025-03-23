@@ -13,6 +13,10 @@
   "keywords": ["typo", "spell-check", "static-analysis"],
   "author": "Yash Patil",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YashPatil0105/typo-scanner/issues"
+  },
+  "homepage": "https://github.com/YashPatil0105/typo-scanner#readme",
   "dependencies": {
     "@babel/parser": "^7.26.10",
     "@babel/traverse": "^7.26.10",
