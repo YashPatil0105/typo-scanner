@@ -3,7 +3,9 @@
   "version": "1.0.1",
   "description": "A tool to detect and report typos in your JavaScript code",
   "main": "src/index.js",
-  "scripts": {
+  "bin": {
+    "typo-scanner": "src/cli.js"
+  },  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
