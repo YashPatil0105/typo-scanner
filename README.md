@@ -1,10 +1,4 @@
 # typo-scanner
-Below is a sample README.md file for your npm package "typo-scanner". This file includes sections for description, installation, usage, configuration, contribution guidelines, and licensing.
-
----
-
-```markdown
-# typo-scanner
 
 A tool to detect and report typographical errors in your JavaScript code. It uses AST parsing along with spell-checking to identify potential typos in variable names, function names, comments, and more.
 
@@ -189,13 +183,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For questions, suggestions, or feedback, please open an issue on GitHub or contact [your-email@example.com](mailto:your-email@example.com).
+For questions, suggestions, or feedback, please open an issue on GitHub or contact [yashpatil0107@gmail.com](mailto:yashpatil0107@gmail.com).
 
 ---
 
-Happy coding!
-```
-
----
-
-This README provides a comprehensive overview of your package and how to use it, making it easier for users to get started and for contributors to understand the project structure. Feel free to modify sections as needed to best match your project details.
