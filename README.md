@@ -22,7 +22,7 @@ A tool to detect and report typographical errors in your JavaScript code. It use
 - **Spell-Checking Integration:** Checks words against a dictionary and suggests corrections.
 - **Duplicate Aggregation:** Aggregates duplicate typo occurrences along with occurrence counts.
 - **Customizable Whitelist:** Easily configure a list of words (e.g., common JavaScript methods) to ignore.
-- **HTML Report Generation:** (Optional) Generates a dark-themed HTML report with inline code highlights and tooltips.
+- **HTML Report Generation:** Generates a dark-themed HTML report with inline code highlights and tooltips.
 
 ## Installation
 
@@ -63,21 +63,11 @@ const results = analyzeFile(filePath);
 console.log(results);
 ```
 
-Each element in the returned array has the following structure:
-
-- `word`: The detected misspelled word.
-- `count`: The number of occurrences.
-- `suggestions`: An array of suggested corrections.
-- `occurrences`: An array of objects with:
-  - `line`: Line number of the typo.
-  - `column`: Column number where the typo starts.
-  - `snippet`: The line of code containing the typo.
-
 ## Configuration
 
 You can customize the behavior of `typo-scanner` by providing a configuration file (e.g., `typoscanner.config.json`) in your project root. This file may include:
 
-- **Whitelist:** Array of words that should not be flagged (e.g., `["forEach", "map", "filter", ...]`).
+- **Whitelist:** Array of words that should not be flagged (e.g., `['forEach', 'map', 'filter', ...]`).
 - **Custom Dictionaries:** Define additional words that are valid for your project.
 
 Example configuration:
@@ -126,35 +116,41 @@ Running the command-line tool:
 typo-scanner sample.js
 ```
 
-might output:
+### Console-Based Analysis Output
 
-```json
-[
-  {
-    "word": "calcluateSum",
-    "count": 1,
-    "suggestions": ["calculateSum"],
-    "occurrences": [
-      {
-        "line": 2,
-        "column": 10,
-        "snippet": "function calcluateSum(a, b) {"
-      }
-    ]
-  },
-  {
-    "word": "numbrs",
-    "count": 2,
-    "suggestions": ["numbers"],
-    "occurrences": [
-      { "line": 4, "column": 7, "snippet": "const numbrs = [1, 2, 3, 4];" },
-      { "line": 6, "column": 0, "snippet": "numbrs.forEach(numbr => {" }
-    ]
-  }
-]
+```
+Word: calcluateSum
+Occurrences: 1
+Suggestions: calculates
+-> At line 3, column 9
+   function calcluateSum(a, b) {
+-----
+Word: numbrs
+Occurrences: 2
+Suggestions: numbers, numbs, number's
+-> At line 7, column 8
+     const numbrs = [1, 2, 3, 4];
+-> At line 10, column 2
+     numbrs.forEach(numbr => {
+-----
+Word: totl
+Occurrences: 3
+Suggestions: total, tot, tots, toll, tote, toil, tool, tilt, tootle, toot
+-> At line 8, column 6
+     let totl = 0;
+-> At line 11, column 4
+       totl += numbr;
+-> At line 14, column 31
+     console.log("The total is:", totl);
+-----
+HTML report generated at: D:\NPM_Package_build\typo-scanner\src\report.html
 ```
 
-And if HTML reporting is enabled, it will generate a visually rich `report.html` file.
+### HTML Report
+
+If HTML reporting is enabled, an interactive report will be generated in your project directory. Below is a sample screenshot of the generated report:
+
+![Typo Scanner HTML Report](./screenshots/report.jpg)
 
 ## Testing
 
@@ -186,3 +182,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 For questions, suggestions, or feedback, please open an issue on GitHub or contact [yashpatil0107@gmail.com](mailto:yashpatil0107@gmail.com).
 
 ---
+

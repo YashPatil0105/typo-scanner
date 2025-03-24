@@ -95,7 +95,7 @@ function generateHTMLReport(filePath, analysisResults, reportPath) {
     // Use provided reportPath or default to process.cwd() + "report.html"
     reportPath = reportPath || path.join(process.cwd(), "report.html");
     fs.writeFileSync(reportPath, htmlContent, "utf8");
-    console.log(`HTML report generated at: ${reportPath}`);
+    // console.log(`HTML report generated at: ${reportPath}`);
 
     // Debug: Verify if file exists
     if (fs.existsSync(reportPath)) {
