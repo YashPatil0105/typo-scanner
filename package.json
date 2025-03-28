@@ -16,11 +16,20 @@
     "type": "git",
     "url": "git+https://github.com/YashPatil0105/typo-scanner.git"
   },
-  "keywords": [
-    "typo",
-    "spell-check",
-    "static-analysis"
-  ],
+"keywords": [
+  "typo",
+  "spell-check",
+  "spellchecker",
+  "code quality",
+  "AST",
+  "static-analysis",
+  "javascript",
+  "lint",
+  "code review",
+  "typo scanner",
+  "dev tools"
+]
+,
   "author": "Yash Patil",
   "license": "ISC",
   "bugs": {
